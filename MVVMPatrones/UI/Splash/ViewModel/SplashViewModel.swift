@@ -8,7 +8,6 @@
 import Foundation
 
 //MARK: - PROTOCOLO
-
 protocol SplashViewModelProtocol {
     func onViewLoaded()
 }
@@ -32,7 +31,7 @@ final class SplashViewModel {
             self?.viewDelegate?.navigateToHome()
         }
     }
-    
+ 
 }
 
 // MARK: - EXTENSION -

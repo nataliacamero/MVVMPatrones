@@ -26,7 +26,6 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SplashViewModel(viewDelegate: self) //Instancio el modelo
         viewModel?.onViewLoaded()
 
         
@@ -53,7 +52,10 @@ extension SplashViewController: SplashViewControllerProtocol {
     }
     
     func navigateToHome() {
+        // creo vista
         let newvc = HomeTableViewController()
+        // creo viewModel
+        newvc.viewModel = HomeViewModel(viewDelegate: newvc)
         navigationController?.setViewControllers([newvc], animated: true)
     }
     
