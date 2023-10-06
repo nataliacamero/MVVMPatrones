@@ -7,15 +7,17 @@
 
 import UIKit
 
+
+//MARK: - PROTOCOLO -
 protocol HomeTableViewControllerProtocol: AnyObject {
     func navigateToDetail(with data: CharacterModel?)
     func updateViews()
 }
 
-
+//MARK: - CLASE -
 class HomeTableViewController: UITableViewController {
     
-    var viewModel: HomeViewModelProtocol?
+    var viewModel: HomeViewModelProtocol? //Comunico con el model
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +26,11 @@ class HomeTableViewController: UITableViewController {
     }
     
     private func registerCells() {
-        tableView.register(UINib(nibName: "HomeCellTableViewCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "HomeCell")
+        tableView.register(UINib(nibName: "HomeCellTableView", bundle: nil), forCellReuseIdentifier: "CellHome")
     }
-    
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-      
         return 1
     }
 
@@ -39,28 +38,27 @@ class HomeTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return viewModel?.dataCount ?? 0
     }
-
-    
-    override func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeCellTableView else {
+    // Configuracion la celda, UPdateviews
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellHome", for: indexPath) as? HomeCellTableView else {
             return UITableViewCell()
         }
-
+        
         if let data = viewModel?.data(at: indexPath.row) {
             cell.updateViews(data: data)
         }
-        
+            
         return cell
     }
     
+    //Select Item
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.onItemSelected(at: indexPath.row)
     }
-    
 }
 
+
+//MARK: - EXENSION -
 extension HomeTableViewController: HomeTableViewControllerProtocol {
     func updateViews(){
         tableView.reloadData()
@@ -70,7 +68,4 @@ extension HomeTableViewController: HomeTableViewControllerProtocol {
         let newController = DetailViewController()
         navigationController?.pushViewController(newController, animated: true)
     }
-    
-    
-    
 }

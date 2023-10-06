@@ -7,17 +7,18 @@
 
 import Foundation
 
-
+//MARK: - PROTOCOLO -
 protocol HomeViewModelProtocol {
-    
-    var dataCount: Int {get}
+    func onItemSelected(at index: Int)
+    func data(at index: Int) -> CharacterModel?
+    var dataCount: Int {get} //Variable computada
     func onViewsLoaded()
-    func data(at indx: Int) -> CharacterModel
-    func onItemSelected(at indx: Int)
 }
 
-final class HomeViewModel {
-    private weak var viewDelegate: HomeTableViewControllerProtocol?
+
+//MARK: - CLASE -
+final class HomeViewModel { // final es por que no quiero que HEREDEN de nadie.
+    private weak var viewDelegate: HomeTableViewControllerProtocol? //Cuando se hace la comunicacion una de los dos debe ser wek para que no queden dependencias recursivas. Y el protocolo de la clase debe ser AnyObject
     private var viewData = CharactersModel()
     
     init(viewDelegate: HomeTableViewControllerProtocol? = nil) {
@@ -25,29 +26,22 @@ final class HomeViewModel {
     }
     
     private func loadData() {
-      viewData = sampleCharacterData
+        viewData = sampleCharacterData
+        //TODO: Notificar a la vista que se actualice
         viewDelegate?.updateViews()
     }
 }
 
-
+//MARK: - EXENSION -
 extension HomeViewModel: HomeViewModelProtocol {
-    func onItemSelected(at indx: Int) {
-        guard let data = data(at: indx: Int) else {return}
+    func onItemSelected(at index: Int) {
+        guard let data = data(at: index) else {return}
         viewDelegate?.navigateToDetail(with: data)
     }
     
-    func data(at indx: Int) -> CharacterModel {
-        guard let data = data(at: indx) else {
-            return
-        }
-        //TODO: NOTIFICAR A LA VISA QUE NAVEGUE AL DTALLE
-    }
-    
-    
-    func data(at indx: Int) -> CharacterModel? {
-        guard indx < dataCount else {return nil}
-        return viewData[indx]
+    func data(at index: Int) -> CharacterModel? {
+            guard index < dataCount else {return nil}
+            return viewData[index]
     }
     
     var dataCount: Int {
@@ -57,6 +51,4 @@ extension HomeViewModel: HomeViewModelProtocol {
     func onViewsLoaded() {
        loadData()
     }
-    
-    
 }
