@@ -14,6 +14,7 @@ protocol HomeTableViewControllerProtocol: AnyObject {
     func updateViews()
 }
 
+
 //MARK: - CLASE -
 class HomeTableViewController: UITableViewController {
     
@@ -38,6 +39,7 @@ class HomeTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return viewModel?.dataCount ?? 0
     }
+    
     // Configuracion la celda, UPdateviews
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellHome", for: indexPath) as? HomeCellTableView else {
@@ -65,7 +67,7 @@ extension HomeTableViewController: HomeTableViewControllerProtocol {
     }
     
     func navigateToDetail(with data: CharacterModel?) {
-        let newController = DetailViewController()
+        let newController = DetailViewController(dataCharacter: data)//Creo vista
         navigationController?.pushViewController(newController, animated: true)
     }
 }

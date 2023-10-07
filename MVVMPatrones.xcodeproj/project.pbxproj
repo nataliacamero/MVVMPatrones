@@ -22,6 +22,7 @@
 		E15D1A8D2ACCB9B200F5675C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D1A8B2ACCB9B200F5675C /* DetailViewController.xib */; };
 		E15D1A972AD0BADB00F5675C /* HomeCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D1A952AD0BADB00F5675C /* HomeCellTableView.swift */; };
 		E15D1A9C2AD0C96C00F5675C /* HomeCellTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D1A9E2AD0C96C00F5675C /* HomeCellTableView.xib */; };
+		E1EE15652AD1B0FF0020F3FF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE15642AD1B0FF0020F3FF /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E15D1A8B2ACCB9B200F5675C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		E15D1A952AD0BADB00F5675C /* HomeCellTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellTableView.swift; sourceTree = "<group>"; };
 		E15D1A9D2AD0C96C00F5675C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeCellTableView.xib; sourceTree = "<group>"; };
+		E1EE15642AD1B0FF0020F3FF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 		E15D1A902ACDF8CD00F5675C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E1EE15642AD1B0FF0020F3FF /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				E15D1A8C2ACCB9B200F5675C /* DetailViewController.swift in Sources */,
 				E15D1A692ACC983B00F5675C /* SplashViewController.swift in Sources */,
 				E15D1A4F2ACC961200F5675C /* AppDelegate.swift in Sources */,
+				E1EE15652AD1B0FF0020F3FF /* DetailViewModel.swift in Sources */,
 				E15D1A882ACCB20800F5675C /* HomeViewModel.swift in Sources */,
 				E15D1A512ACC961200F5675C /* SceneDelegate.swift in Sources */,
 				E15D1A702ACC9C0200F5675C /* SplashViewModel.swift in Sources */,
