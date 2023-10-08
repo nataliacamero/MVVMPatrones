@@ -36,10 +36,9 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let character = dataCharacter {
+        if let character = viewModel?.character {
             updateViews(data: character)
         }
-                
     }
     
     func updateViews(data: CharacterModel?) {
@@ -48,10 +47,8 @@ class DetailViewController: UIViewController {
         update(name: data?.name)
         update(job: data?.job)
         update(description: data?.description)
-        
     }
-    
-    
+        
     private func update(image: String?) {
         detailImage.image = UIImage(named: image ?? "")
     }
@@ -67,9 +64,6 @@ class DetailViewController: UIViewController {
     private func update(description: String?) {
         descriptionDetail.text = description ?? ""
     }
-    
-   
-
 }
 
 

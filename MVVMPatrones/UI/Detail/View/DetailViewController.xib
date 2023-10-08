@@ -25,23 +25,23 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ky4-hs-r6i" userLabel="Container">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpw-bk-gtZ">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="452"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpw-bk-gtZ" userLabel="ImageView">
+                            <rect key="frame" x="0.0" y="20" width="393" height="432"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xmr-vZ-1vl">
-                                    <rect key="frame" x="0.0" y="50" width="393" height="402"/>
+                                    <rect key="frame" x="0.0" y="74" width="393" height="358"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="xmr-vZ-1vl" secondAttribute="bottom" id="GC0-3z-BJ3"/>
-                                <constraint firstItem="xmr-vZ-1vl" firstAttribute="top" secondItem="wpw-bk-gtZ" secondAttribute="top" constant="50" id="hKq-Pk-Hs2"/>
+                                <constraint firstItem="xmr-vZ-1vl" firstAttribute="top" secondItem="wpw-bk-gtZ" secondAttribute="top" constant="74" id="hKq-Pk-Hs2"/>
                                 <constraint firstAttribute="trailing" secondItem="xmr-vZ-1vl" secondAttribute="trailing" id="jeI-gt-Vpt"/>
                                 <constraint firstItem="xmr-vZ-1vl" firstAttribute="leading" secondItem="wpw-bk-gtZ" secondAttribute="leading" id="puq-8r-5iZ"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aVb-na-qy9" userLabel="StackViewTitle">
-                            <rect key="frame" x="12" y="462" width="369" height="70"/>
+                            <rect key="frame" x="12" y="468" width="369" height="70"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifl-q5-fYL" userLabel="Name">
                                     <rect key="frame" x="0.0" y="0.0" width="369" height="35"/>
@@ -49,7 +49,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k3-xp-Hgc" userLabel="Job">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k3-xp-Hgc" userLabel="Job">
                                     <rect key="frame" x="0.0" y="35" width="369" height="35"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <nil key="textColor"/>
@@ -61,11 +61,10 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KVn-yL-nvK" userLabel="StackViewLabel">
-                            <rect key="frame" x="12" y="562" width="369" height="250"/>
+                            <rect key="frame" x="12" y="538" width="369" height="250"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j4W-YB-MSg">
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4W-YB-MSg">
                                     <rect key="frame" x="0.0" y="0.0" width="369" height="250"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                     <color key="textColor" systemColor="labelColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -79,13 +78,13 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="wpw-bk-gtZ" firstAttribute="top" secondItem="Ky4-hs-r6i" secondAttribute="top" id="1k3-ou-h0W"/>
+                        <constraint firstItem="wpw-bk-gtZ" firstAttribute="top" secondItem="Ky4-hs-r6i" secondAttribute="top" constant="20" symbolic="YES" id="1k3-ou-h0W"/>
                         <constraint firstAttribute="bottom" secondItem="wpw-bk-gtZ" secondAttribute="bottom" constant="400" id="4OE-KZ-xqt"/>
-                        <constraint firstAttribute="bottom" secondItem="KVn-yL-nvK" secondAttribute="bottom" constant="40" id="5i7-0d-o1q"/>
+                        <constraint firstAttribute="bottom" secondItem="KVn-yL-nvK" secondAttribute="bottom" constant="64" id="5i7-0d-o1q"/>
                         <constraint firstItem="aVb-na-qy9" firstAttribute="leading" secondItem="Ky4-hs-r6i" secondAttribute="leading" constant="12" id="8oK-sr-pLe"/>
-                        <constraint firstItem="KVn-yL-nvK" firstAttribute="top" secondItem="aVb-na-qy9" secondAttribute="bottom" constant="30" id="O3r-ie-XZo"/>
                         <constraint firstAttribute="trailing" secondItem="wpw-bk-gtZ" secondAttribute="trailing" id="Pdy-6r-1K1"/>
                         <constraint firstItem="wpw-bk-gtZ" firstAttribute="leading" secondItem="Ky4-hs-r6i" secondAttribute="leading" id="VJB-Ef-YjE"/>
+                        <constraint firstItem="KVn-yL-nvK" firstAttribute="top" secondItem="aVb-na-qy9" secondAttribute="bottom" id="a6C-k3-QXr"/>
                         <constraint firstAttribute="trailing" secondItem="aVb-na-qy9" secondAttribute="trailing" constant="12" id="d9L-xu-PAW"/>
                         <constraint firstAttribute="trailing" secondItem="KVn-yL-nvK" secondAttribute="trailing" constant="12" id="hGh-jI-buP"/>
                         <constraint firstItem="KVn-yL-nvK" firstAttribute="leading" secondItem="Ky4-hs-r6i" secondAttribute="leading" constant="12" id="mKt-P1-M9T"/>

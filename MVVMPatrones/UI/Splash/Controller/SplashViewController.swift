@@ -24,7 +24,7 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SplashViewModel(viewDelegate: self) //Instanciamos la clase conla que nos comunicamos
+        viewModel = SplashViewModel(viewDelegate: self) //Instanciamos la clase con la que nos comunicamos
         viewModel?.onViewLoaded()
     }
     
@@ -49,10 +49,10 @@ extension SplashViewController: SplashViewControllerProtocol {
     }
     //Metodo para navegar a la vista
     func navigateToHome() {
-        // creo vista, siempre que creo la vista debo ir a crearla, y es ahi donde se instancia, es cr dondvoy a ir a navegar hacia ella.
+        // creo vista, siempre que creo la vista debo ir a crearla, y es ahi donde se instancia, en donde voy a ir a navegar hacia ella.
         let newViewController = HomeTableViewController()// Vista delegada
         // creo viewModel
-        newViewController.viewModel = HomeViewModel(viewDelegate: newViewController)// Inyeccion de dpenncias, es dcir iyecto la clase.
+        newViewController.viewModel = HomeViewModel(viewDelegate: newViewController)// Inyeccion de dependencias, es decir inyecto la clase.
         navigationController?.setViewControllers([newViewController], animated: true)
     }
     

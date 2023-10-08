@@ -67,7 +67,8 @@ extension HomeTableViewController: HomeTableViewControllerProtocol {
     }
     
     func navigateToDetail(with data: CharacterModel?) {
-        let newController = DetailViewController(dataCharacter: data)//Creo vista
+        let newController = DetailViewController()//Creo vista
+        newController.viewModel = DetailViewModel(viewDelegate: newController , character: data)
         navigationController?.pushViewController(newController, animated: true)
     }
 }
