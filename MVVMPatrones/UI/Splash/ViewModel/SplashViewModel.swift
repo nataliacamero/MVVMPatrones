@@ -26,9 +26,8 @@ final class SplashViewModel {
     private func loadData() {
         viewDelegate?.showLoding(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [weak self] in
-            // Esto es lo que se ejecutará después de 3 segundos
-            print("Datos cargados")
-            ///Notificar a la vista que  navegue a la home
+            
+            //Notificar a la vista que  navegue a la home
             self?.viewDelegate?.showLoding(false)
             self?.viewDelegate?.navigateToHome()
         }

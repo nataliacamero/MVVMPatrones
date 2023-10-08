@@ -10,6 +10,7 @@ import Foundation
 //MARK: - PROTOCOLO -
 protocol DetailViewModelProtocol {
     var character: CharacterModel? {get}
+    func onViewsLoaded()
 }
 
 //MARK: - CLASE -
@@ -28,6 +29,10 @@ final class DetailViewModel {
 
 //MARK: - EXTENSION -
 extension DetailViewModel: DetailViewModelProtocol {
+    func onViewsLoaded() {
+        viewDelegate?.updateViews(data: character)
+    }
+    
 }
    
     

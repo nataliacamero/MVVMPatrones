@@ -9,7 +9,7 @@ import UIKit
 
 //MARK: - PROTOCOLO -
 protocol DetailViewControllerProtocol: AnyObject {
-    
+    func updateViews(data: CharacterModel?)
 }
 
 
@@ -37,18 +37,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let character = viewModel?.character {
-            updateViews(data: character)
+            viewModel?.onViewsLoaded()
+                //updateViews(data: character)
         }
     }
-    
-    func updateViews(data: CharacterModel?) {
-        guard (data != nil) else {return}
-        update(image: data?.image)
-        update(name: data?.name)
-        update(job: data?.job)
-        update(description: data?.description)
-    }
-        
+   
     private func update(image: String?) {
         detailImage.image = UIImage(named: image ?? "")
     }
@@ -69,6 +62,14 @@ class DetailViewController: UIViewController {
 
 //MARK: - EXTENSION -
 extension DetailViewController: DetailViewControllerProtocol {
+    func updateViews(data: CharacterModel?) {
+        guard (data != nil) else {return}
+        update(image: data?.image)
+        update(name: data?.name)
+        update(job: data?.job)
+        update(description: data?.description)
+    }
+    
     
 }
 
