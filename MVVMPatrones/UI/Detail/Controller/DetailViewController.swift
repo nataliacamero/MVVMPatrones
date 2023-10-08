@@ -38,7 +38,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         if let character = viewModel?.character {
             viewModel?.onViewsLoaded()
-                //updateViews(data: character)
         }
     }
    
