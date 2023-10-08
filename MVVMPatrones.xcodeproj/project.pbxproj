@@ -237,7 +237,6 @@
 			children = (
 				E15D1A992AD0BAEC00F5675C /* View */,
 				E15D1A9A2AD0BAF200F5675C /* Controller */,
-				E15D1A9B2AD0BAFB00F5675C /* ViewModel */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -256,13 +255,6 @@
 				E15D1A952AD0BADB00F5675C /* HomeCellTableView.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E15D1A9B2AD0BAFB00F5675C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
