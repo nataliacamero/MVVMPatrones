@@ -26,20 +26,9 @@ Upon opening the application, you will be greeted with the main screen displayin
 
 ## How it looks
 
-<div align="center">
-  <a href="https://github.com/nataliacamero/MVVMPatrones/blob/main/mvvmPatones_app_video.mov">
-    <img src="ruta/a/miniatura.png" alt="Miniatura del video" width="640" height="360">
-  </a>
-</div>
-
-
-<div align="center">
-  <video width="400" controls>
-    <source src="https://github.com/nataliacamero/MVVMPatrones/blob/main/mvvmPatones_app_video.mov" type="video/mp4">
-  </video>
-</div>
-
-[![Miniatura del video](ruta/a/miniatura.png)](https://github.com/nataliacamero/MVVMPatrones/blob/main/mvvmPatones_app_video.mov)
+<img src="https://raw.githubusercontent.com/nataliacamero/MVVMPatrones/main/readmeSources/LounchScreen.png" alt="launch_screen" width="300"/>
+<img src="https://raw.githubusercontent.com/nataliacamero/MVVMPatrones/main/readmeSources/homeScreen.png" alt="home_app_screen" width="300"/>
+<img src="https://raw.githubusercontent.com/nataliacamero/MVVMPatrones/main/readmeSources/detailApp.png" alt="detail_screen" width="300"/>
 
 
 
