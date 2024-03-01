@@ -9,30 +9,32 @@ import Foundation
 
 //MARK: - PROTOCOLO -
 protocol DetailViewModelProtocol {
-    var character: CharacterModel? {get}
     func onViewsLoaded()
 }
 
+
 //MARK: - CLASE -
 final class DetailViewModel {
-    private weak var viewDelegate: DetailViewControllerProtocol?  //Conexion con la vista
-    var character: CharacterModel?
+    //Conexion con la vista
+    private weak var viewDelegate: DetailViewControllerProtocol?
+   
+    private var characterData: CharacterModel?
     
-    init(viewDelegate: DetailViewControllerProtocol? = nil, character: CharacterModel?) {
+    init(viewDelegate: DetailViewControllerProtocol?, characterData: CharacterModel?) {
         self.viewDelegate = viewDelegate
-        self.character = character
+        self.characterData = characterData
     }
-    
-    
 }
 
 
 //MARK: - EXTENSION -
 extension DetailViewModel: DetailViewModelProtocol {
     func onViewsLoaded() {
-        viewDelegate?.updateViews(data: character)
+        viewDelegate?.update(image: characterData?.image)
+        viewDelegate?.update(name: characterData?.name)
+        viewDelegate?.update(job: characterData?.job)
+        viewDelegate?.update(description: characterData?.description)
     }
-    
 }
    
     

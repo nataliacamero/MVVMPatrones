@@ -9,7 +9,10 @@ import UIKit
 
 //MARK: - PROTOCOLO -
 protocol DetailViewControllerProtocol: AnyObject {
-    func updateViews(data: CharacterModel?)
+    func update(image: String?)
+    func update(name: String?)
+    func update(job: String?)
+    func update(description: String?)
 }
 
 
@@ -20,47 +23,33 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionDetail: UITextView!
     @IBOutlet weak var jobDetail: UILabel!
     
-    var viewModel: DetailViewModelProtocol?//Comunicacion con el modelo
-    
-//    var dataCharacter: CharacterModel?
+    //Comunicacion con el modelo
+    var viewModel: DetailViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if viewModel?.character != nil {
-            viewModel?.onViewsLoaded()
-        }
-        
-    }
-   
-    private func update(image: String?) {
-        detailImage.image = UIImage(named: image ?? "")
-    }
-    
-    private func update(name: String?) {
-        nameDetail.text = name ?? ""
-    }
-    
-    private func update(job: String?) {
-        jobDetail.text = job ?? ""
-    }
-    
-    private func update(description: String?) {
-        descriptionDetail.text = description ?? ""
+        viewModel?.onViewsLoaded()
     }
 }
 
 
 //MARK: - EXTENSION -
 extension DetailViewController: DetailViewControllerProtocol {
-    func updateViews(data: CharacterModel?) {
-        guard (data != nil) else {return}
-        update(image: data?.image)
-        update(name: data?.name)
-        update(job: data?.job)
-        update(description: data?.description)
+    func update(image: String?) {
+        detailImage.image = UIImage(named: image ?? "")
     }
     
+    func update(name: String?) {
+        nameDetail.text = name ?? ""
+    }
     
+    func update(job: String?) {
+        jobDetail.text = job ?? ""
+    }
+    
+    func update(description: String?) {
+        descriptionDetail.text = description ?? ""
+    }
 }
 
 
