@@ -26,12 +26,14 @@ Upon opening the application, you will be greeted with the main screen displayin
 
 ## How it looks
 
+- Lounch screen:
 <img src="https://raw.githubusercontent.com/nataliacamero/MVVMPatrones/main/readmeSources/LounchScreen.png" alt="launch_screen" width="300"/>
+
+- Home screen:
 <img src="https://raw.githubusercontent.com/nataliacamero/MVVMPatrones/main/readmeSources/homeScreen.png" alt="home_app_screen" width="300"/>
+
+- Detail screen:
 <img src="https://raw.githubusercontent.com/nataliacamero/MVVMPatrones/main/readmeSources/detailApp.png" alt="detail_screen" width="300"/>
-
-
-
 
 
 ## Contributions
