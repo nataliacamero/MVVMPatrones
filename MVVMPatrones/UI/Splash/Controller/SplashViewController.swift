@@ -24,7 +24,6 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SplashViewModel(viewDelegate: self) //Instanciamos la clase con la que nos comunicamos
         viewModel?.onViewLoaded()
     }
     
