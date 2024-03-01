@@ -27,10 +27,20 @@ Upon opening the application, you will be greeted with the main screen displayin
 ## How it looks
 
 <div align="center">
+  <a href="https://github.com/nataliacamero/MVVMPatrones/blob/main/mvvmPatones_app_video.mov">
+    <img src="ruta/a/miniatura.png" alt="Miniatura del video" width="640" height="360">
+  </a>
+</div>
+
+
+<div align="center">
   <video width="400" controls>
     <source src="https://github.com/nataliacamero/MVVMPatrones/blob/main/mvvmPatones_app_video.mov" type="video/mp4">
   </video>
 </div>
+
+[![Miniatura del video](ruta/a/miniatura.png)](https://github.com/nataliacamero/MVVMPatrones/blob/main/mvvmPatones_app_video.mov)
+
 
 
 
