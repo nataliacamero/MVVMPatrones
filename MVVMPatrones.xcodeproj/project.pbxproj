@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E107C22C2B922DBA00AE79E2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E107C22B2B922DBA00AE79E2 /* README.md */; };
 		E15D1A4F2ACC961200F5675C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D1A4E2ACC961200F5675C /* AppDelegate.swift */; };
 		E15D1A512ACC961200F5675C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D1A502ACC961200F5675C /* SceneDelegate.swift */; };
 		E15D1A582ACC961300F5675C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15D1A572ACC961300F5675C /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E107C22B2B922DBA00AE79E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E15D1A4B2ACC961200F5675C /* MVVMPatrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMPatrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15D1A4E2ACC961200F5675C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15D1A502ACC961200F5675C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		E15D1A422ACC961200F5675C = {
 			isa = PBXGroup;
 			children = (
+				E107C22B2B922DBA00AE79E2 /* README.md */,
 				E15D1A4D2ACC961200F5675C /* MVVMPatrones */,
 				E15D1A4C2ACC961200F5675C /* Products */,
 			);
@@ -318,6 +321,7 @@
 				E15D1A9C2AD0C96C00F5675C /* HomeCellTableView.xib in Resources */,
 				E15D1A752ACC9E3400F5675C /* HomeTableViewController.xib in Resources */,
 				E15D1A8D2ACCB9B200F5675C /* DetailViewController.xib in Resources */,
+				E107C22C2B922DBA00AE79E2 /* README.md in Resources */,
 				E15D1A5B2ACC961300F5675C /* LaunchScreen.storyboard in Resources */,
 				E15D1A6A2ACC983B00F5675C /* SplashViewController.xib in Resources */,
 				E15D1A582ACC961300F5675C /* Assets.xcassets in Resources */,
