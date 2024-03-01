@@ -36,9 +36,10 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let character = viewModel?.character {
+        if viewModel?.character != nil {
             viewModel?.onViewsLoaded()
         }
+        
     }
    
     private func update(image: String?) {

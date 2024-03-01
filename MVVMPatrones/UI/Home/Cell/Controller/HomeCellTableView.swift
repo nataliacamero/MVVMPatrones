@@ -18,6 +18,7 @@ class HomeCellTableView: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         cellHomeName.text = nil
         cellHomeImage.image = nil
     }
