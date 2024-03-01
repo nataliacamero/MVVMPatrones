@@ -24,9 +24,14 @@ To run MVVMPatrones on your iOS device:
 Upon opening the application, you will be greeted with the main screen displaying a list of characters from a TV series. You can navigate the list by tapping on a character to view more details.
 
 
-## Screenshots
+## How it looks
 
-Here are some screenshots of the application:
+<div align="center">
+  <video width="400" controls>
+    <source src="https://github.com/nataliacamero/MVVMPatrones/blob/main/mvvmPatones_app_video.mov" type="video/mp4">
+  </video>
+</div>
+
 
 
 
